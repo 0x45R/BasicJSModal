@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  min-height:100dvh;
+  font-family:Inter, sans-serif;
+  flex-direction:column;
+  gap:0.5rem;
+  transition: 300ms scale;
+}
+main{
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
+
+
+}
+main>button{
+  appearance:none;
+  cursor:pointer;
+  padding:0.25rem;
+  border:1px solid black;
+  background:lightgray;
+  border-radius:0.25rem;
+  font-weight:600;
+  font-size:1.05rem;
+  transition: 300ms background, 300ms color;
+}
+main>button:hover{
+  background:crimson;
+  color: white;
+}
+h1{
+  text-align:center;
+}
+
+body.explode{
+  scale:0;
+}
+.big-button{
+  width:10rem;
+  height:10rem;
+  background:lightgray;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:0.5rem;
+  border: 1px solid black;
+}
+.big-button__cap{
+  --dent: 15px;
+  cursor:pointer;
+  transform:translateY(calc(var(--dent) * -1));
+  background:crimson;
+  width:7rem;
+  height:7rem;
+  border:0px solid;
+  border-radius:50%;
+  box-shadow:0px var(--dent) #8f0b26;
+  transition: 300ms transform, 300ms box-shadow;
+}
+.big-button__cap:hover{
+  --dent: 10px;
+}
+.big-button__cap:active{
+  --dent: 5px;
+}
